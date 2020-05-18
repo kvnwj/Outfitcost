@@ -2713,7 +2713,7 @@ td.invert-image a img {
 		margin: 1em auto;
 	}
 	.dropdown-menu.columns-3 {
-		min-width: 585px;
+		min-width: 250px;
 	}
 	ul.multi-column-dropdown h6 {
 		font-size: 1.2em;

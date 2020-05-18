@@ -1,3 +1,14 @@
+<?php
+// Code buat connect secara PDO
+require("pdoConnection.php");
+
+// Get categories
+$sql = "SELECT * FROM category";
+$stmt = $pdo->prepare($sql);
+$stmt -> execute();
+$categories = $stmt->fetchAll();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -92,39 +103,14 @@
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b
 											class="caret"></b></a>
-									<ul class="dropdown-menu multi-column columns-3">
+									<ul class="dropdown-menu multi-column columns-3" style="min-width: 250px;">
 										<!-- Pake foreach untuk ambil data dari database, tampilkan ke dropdown menu -->
 										<div class="row">
-											<div class="col-sm-4">
+											<div class="col-sm-12">
 												<ul class="multi-column-dropdown">
-													<h6>Men's Bag</h6>
-													<li><a href="products.php">Backpack</a></li>
-													<li><a href="products.php">Briefcase</a></li>
-													<li><a href="products.php">Carryall</a></li>
-													<li><a href="products.php">Sling Bag</a></li>
-													<li><a href="products.php">Tote Bag</a></li>
-													<li><a href="products.php">Waist Bag</a></li>
-												</ul>
-											</div>
-											<div class="col-sm-4">
-												<ul class="multi-column-dropdown">
-													<h6>Women's Bag</h6>
-													<li><a href="products.php">Backpack</a></li>
-													<li><a href="products.php">Clutch Bag</a></li>
-													<li><a href="products.php">Drawstring Bag</a></li>
-													<li><a href="products.php">Sling Bag</a></li>
-													<li><a href="products.php">Tote Bag</a></li>
-													<li><a href="products.php">Wallets Bag</a></li>
-													<li><a href="products.php">Wristlet</a></li>
-												</ul>
-											</div>
-											<div class="col-sm-4">
-												<ul class="multi-column-dropdown">
-													<h6>Kid's Bag</h6>
-													<li><a href="products.php">Backpack</a></li>
-													<li><a href="products.php">Boy's School Bag</a></li>
-													<li><a href="products.php">Girl's School Bag</a></li>
-													<li><a href="products.php">Trolley Bag</a></li>
+													<?php foreach ($categories as $category) { ?>
+														<li><a href="products.php?category=<?= $category['CategoryName']?>"><?= $category['CategoryName']?></a></li>
+													<?php } ?>
 												</ul>
 											</div>
 											<div class="clearfix"></div>
