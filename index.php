@@ -54,7 +54,7 @@
 								href="mailto:info@example.com">outfitcost@gmail.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 <span>567 </span>893
 						</li>
-						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.html">Login</a>
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.php">Login</a>
 						</li>
 						<li class="active"><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a
 								href="register.html">Register</a></li>
@@ -71,7 +71,7 @@
 			</div>
 			<div class="logo-nav">
 				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-					<h1><a href="index.html">Outfitcost <span>Shop anywhere</span></a></h1>
+					<h1><a href="index.php">Outfitcost <span>Shop anywhere</span></a></h1>
 				</div>
 				<div class="logo-nav-left1">
 					<nav class="navbar navbar-default">
@@ -87,7 +87,7 @@
 						</div>
 						<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="index.html" class="act">Home</a></li>
+								<li class="active"><a href="index.php" class="act">Home</a></li>
 								<!-- untuk menu -->
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b
@@ -169,7 +169,7 @@
 										</div>
 									</ul>
 								</li>
-								<li><a href="mail.html">Mail Us</a></li>
+								<li><a href="mail.php">Mail Us</a></li>
 							</ul>
 						</div>
 					</nav>
@@ -306,10 +306,10 @@
 				<div class="col-md-3 new-collections-grid">
 					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/7.jpg" alt=" "
+							<a href="single.php" class="product-image"><img src="images/7.jpg" alt=" "
 									class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
+								<a href="single.php">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right">
 								<div class="rating">
@@ -332,7 +332,7 @@
 								</div>
 							</div>
 						</div>
-						<h4><a href="single.html">Formal Bag</a></h4>
+						<h4><a href="single.php">Formal Bag</a></h4>
 						<p>Suitable for Work</p>
 						<div class="new-collections-grid1-left simpleCart_shelfItem">
 							<p><i>$325</i> <span class="item_price">$250</span><a class="item_add" href="#">add to cart
@@ -341,10 +341,10 @@
 					</div>
 					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/8.jpg" alt=" "
+							<a href="single.php" class="product-image"><img src="images/8.jpg" alt=" "
 									class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
+								<a href="single.php">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right">
 								<div class="rating">
@@ -367,7 +367,7 @@
 								</div>
 							</div>
 						</div>
-						<h4><a href="single.html">C&K Bag</a></h4>
+						<h4><a href="single.php">C&K Bag</a></h4>
 						<p>Suitable for Everyday Use</p>
 						<div class="new-collections-grid1-left simpleCart_shelfItem">
 							<p><i>$280</i> <span class="item_price">$150</span><a class="item_add" href="#">add to cart
@@ -379,10 +379,10 @@
 					<div class="new-collections-grid1 new-collections-grid1-image-width animated wow slideInUp"
 						data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/5.jpg" alt=" "
+							<a href="single.php" class="product-image"><img src="images/5.jpg" alt=" "
 									class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos new-collections-grid1-image-pos1">
-								<a href="single.html">Quick View</a>
+								<a href="single.php">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right new-collections-grid1-right-rate">
 								<div class="rating">
@@ -408,7 +408,7 @@
 								<p>New</p>
 							</div>
 						</div>
-						<h4><a href="single.html">Travel Bag</a></h4>
+						<h4><a href="single.php">Travel Bag</a></h4>
 						<p>Suitable for Outdoor Travel</p>
 						<div class="new-collections-grid1-left simpleCart_shelfItem">
 							<p><i>$580</i> <span class="item_price">$550</span><a class="item_add" href="#">add to cart
@@ -419,10 +419,10 @@
 						<div class="new-collections-grid1-sub">
 							<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 								<div class="new-collections-grid1-image">
-									<a href="single.html" class="product-image"><img src="images/6.jpg" alt=" "
+									<a href="single.php" class="product-image"><img src="images/6.jpg" alt=" "
 											class="img-responsive" /></a>
 									<div class="new-collections-grid1-image-pos">
-										<a href="single.html">Quick View</a>
+										<a href="single.php">Quick View</a>
 									</div>
 									<div class="new-collections-grid1-right">
 										<div class="rating">
@@ -445,7 +445,7 @@
 										</div>
 									</div>
 								</div>
-								<h4><a href="single.html">Shoulder Bag</a></h4>
+								<h4><a href="single.php">Shoulder Bag</a></h4>
 								<p>Suitable for Everyday Use</p>
 								<div class="new-collections-grid1-left simpleCart_shelfItem">
 									<p><i>$480</i> <span class="item_price">$400</span><a class="item_add" href="#">add
@@ -456,10 +456,10 @@
 						<div class="new-collections-grid1-sub">
 							<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 								<div class="new-collections-grid1-image">
-									<a href="single.html" class="product-image"><img src="images/9.jpg" alt=" "
+									<a href="single.php" class="product-image"><img src="images/9.jpg" alt=" "
 											class="img-responsive" /></a>
 									<div class="new-collections-grid1-image-pos">
-										<a href="single.html">Quick View</a>
+										<a href="single.php">Quick View</a>
 									</div>
 									<div class="new-collections-grid1-right">
 										<div class="rating">
@@ -482,7 +482,7 @@
 										</div>
 									</div>
 								</div>
-								<h4><a href="single.html">Backpack</a></h4>
+								<h4><a href="single.php">Backpack</a></h4>
 								<p>Suitable for Adventure Trip</p>
 								<div class="new-collections-grid1-left simpleCart_shelfItem">
 									<p><i>$280</i> <span class="item_price">$150</span><a class="item_add" href="#">add
@@ -496,10 +496,10 @@
 				<div class="col-md-3 new-collections-grid">
 					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/10.jpg" alt=" "
+							<a href="single.php" class="product-image"><img src="images/10.jpg" alt=" "
 									class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
+								<a href="single.php">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right">
 								<div class="rating">
@@ -522,7 +522,7 @@
 								</div>
 							</div>
 						</div>
-						<h4><a href="single.html">Tote Bag</a></h4>
+						<h4><a href="single.php">Tote Bag</a></h4>
 						<p>Suitable for Shopping</p>
 						<div class="new-collections-grid1-left simpleCart_shelfItem">
 							<p><i>$180</i> <span class="item_price">$120</span><a class="item_add" href="#">add to cart
@@ -531,10 +531,10 @@
 					</div>
 					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/11.jpg" alt=" "
+							<a href="single.php" class="product-image"><img src="images/11.jpg" alt=" "
 									class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
+								<a href="single.php">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right">
 								<div class="rating">
@@ -557,7 +557,7 @@
 								</div>
 							</div>
 						</div>
-						<h4><a href="single.html">Gucci Bag</a></h4>
+						<h4><a href="single.php">Gucci Bag</a></h4>
 						<p>Suitable for Everyday Use</p>
 						<div class="new-collections-grid1-left simpleCart_shelfItem">
 							<p><i>$890</i> <span class="item_price">$857</span><a class="item_add" href="#">add to cart
@@ -655,40 +655,40 @@
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
 					<h3>Outfitcost Events</h3>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -696,20 +696,20 @@
 					<h3>Community</h3>
 					<div class="footer-grid-sub-grids">
 						<div class="footer-grid-sub-grid-left">
-							<a href="single.html"><img src="images/91.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single.php"><img src="images/91.jpg" alt=" " class="img-responsive" /></a>
 						</div>
 						<div class="footer-grid-sub-grid-right">
-							<h4><a href="single.html">Sellers</a></h4>
+							<h4><a href="single.php">Sellers</a></h4>
 							<p>Posted On 12/1/2020</p>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
 					<div class="footer-grid-sub-grids">
 						<div class="footer-grid-sub-grid-left">
-							<a href="single.html"><img src="images/101.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single.php"><img src="images/101.jpg" alt=" " class="img-responsive" /></a>
 						</div>
 						<div class="footer-grid-sub-grid-right">
-							<h4><a href="single.html">Buyers</a></h4>
+							<h4><a href="single.php">Buyers</a></h4>
 							<p>Posted On 25/3/2020</p>
 						</div>
 						<div class="clearfix"> </div>
@@ -718,7 +718,7 @@
 				<div class="clearfix"> </div>
 			</div>
 			<div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
-				<h2><a href="index.html">Outfitcost <span>shop anywhere</span></a></h2>
+				<h2><a href="index.php">Outfitcost <span>shop anywhere</span></a></h2>
 			</div>
 			<div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
 				<p>&copy 2020 Outfitcost. All rights reserved</p>
