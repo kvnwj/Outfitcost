@@ -57,7 +57,7 @@
 						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.php">Login</a>
 						</li>
 						<li class="active"><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a
-								href="register.html">Register</a></li>
+								href="register.php">Register</a></li>
 					</ul>
 				</div>
 				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
@@ -98,33 +98,33 @@
 											<div class="col-sm-4">
 												<ul class="multi-column-dropdown">
 													<h6>Men's Bag</h6>
-													<li><a href="products.html">Backpack</a></li>
-													<li><a href="products.html">Briefcase</a></li>
-													<li><a href="products.html">Carryall</a></li>
-													<li><a href="products.html">Sling Bag</a></li>
-													<li><a href="products.html">Tote Bag</a></li>
-													<li><a href="products.html">Waist Bag</a></li>
+													<li><a href="products.php">Backpack</a></li>
+													<li><a href="products.php">Briefcase</a></li>
+													<li><a href="products.php">Carryall</a></li>
+													<li><a href="products.php">Sling Bag</a></li>
+													<li><a href="products.php">Tote Bag</a></li>
+													<li><a href="products.php">Waist Bag</a></li>
 												</ul>
 											</div>
 											<div class="col-sm-4">
 												<ul class="multi-column-dropdown">
 													<h6>Women's Bag</h6>
-													<li><a href="products.html">Backpack</a></li>
-													<li><a href="products.html">Clutch Bag</a></li>
-													<li><a href="products.html">Drawstring Bag</a></li>
-													<li><a href="products.html">Sling Bag</a></li>
-													<li><a href="products.html">Tote Bag</a></li>
-													<li><a href="products.html">Wallets Bag</a></li>
-													<li><a href="products.html">Wristlet</a></li>
+													<li><a href="products.php">Backpack</a></li>
+													<li><a href="products.php">Clutch Bag</a></li>
+													<li><a href="products.php">Drawstring Bag</a></li>
+													<li><a href="products.php">Sling Bag</a></li>
+													<li><a href="products.php">Tote Bag</a></li>
+													<li><a href="products.php">Wallets Bag</a></li>
+													<li><a href="products.php">Wristlet</a></li>
 												</ul>
 											</div>
 											<div class="col-sm-4">
 												<ul class="multi-column-dropdown">
 													<h6>Kid's Bag</h6>
-													<li><a href="products.html">Backpack</a></li>
-													<li><a href="products.html">Boy's School Bag</a></li>
-													<li><a href="products.html">Girl's School Bag</a></li>
-													<li><a href="products.html">Trolley Bag</a></li>
+													<li><a href="products.php">Backpack</a></li>
+													<li><a href="products.php">Boy's School Bag</a></li>
+													<li><a href="products.php">Girl's School Bag</a></li>
+													<li><a href="products.php">Trolley Bag</a></li>
 												</ul>
 											</div>
 											<div class="clearfix"></div>
@@ -139,30 +139,30 @@
 											<div class="col-sm-4">
 												<ul class="multi-column-dropdown">
 													<h6>New Arrivals</h6>
-													<li><a href="products.html">Adidas</a></li>
-													<li><a href="products.html">Chanel</a></li>
-													<li><a href="products.html">Mulberry</a></li>
-													<li><a href="products.html">Michael Kors</a></li>
-													<li><a href="products.html">Versace</a></li>
+													<li><a href="products.php">Adidas</a></li>
+													<li><a href="products.php">Chanel</a></li>
+													<li><a href="products.php">Mulberry</a></li>
+													<li><a href="products.php">Michael Kors</a></li>
+													<li><a href="products.php">Versace</a></li>
 												</ul>
 											</div>
 											<div class="col-sm-4">
 												<ul class="multi-column-dropdown">
 													<h6>Limited Collections</h6>
-													<li><a href="products.html">Carlier</a></li>
-													<li><a href="products.html">Coach</a></li>
-													<li><a href="products.html">Dior</a></li>
-													<li><a href="products.html">Gucci</a></li>
-													<li><a href="products.html">Jimmy Choo</a></li>
-													<li><a href="products.html">Louis Vuitton</a></li>
+													<li><a href="products.php">Carlier</a></li>
+													<li><a href="products.php">Coach</a></li>
+													<li><a href="products.php">Dior</a></li>
+													<li><a href="products.php">Gucci</a></li>
+													<li><a href="products.php">Jimmy Choo</a></li>
+													<li><a href="products.php">Louis Vuitton</a></li>
 												</ul>
 											</div>
 											<div class="col-sm-4">
 												<ul class="multi-column-dropdown">
 													<h6>Accessories</h6>
-													<li><a href="products.html">Sport</a></li>
-													<li><a href="products.html">Travel</a></li>
-													<li><a href="products.html">Others</a></li>
+													<li><a href="products.php">Sport</a></li>
+													<li><a href="products.php">Travel</a></li>
+													<li><a href="products.php">Others</a></li>
 												</ul>
 											</div>
 											<div class="clearfix"></div>
@@ -573,7 +573,7 @@
 		<div class="container">
 			<div class="timer-grids">
 				<div class="col-md-8 timer-grid-left animated wow slideInLeft" data-wow-delay=".5s">
-					<h3><a href="products.html">Louis Vuitton Monogram Shoulder Bag</a></h3>
+					<h3><a href="products.php">Louis Vuitton Monogram Shoulder Bag</a></h3>
 					<div class="rating">
 						<div class="rating-left">
 							<img src="images/2.png" alt=" " class="img-responsive" />

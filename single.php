@@ -39,8 +39,8 @@
 					<ul>
 						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">outfitcost@gmail.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 <span>567 </span>893</li>
-						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.html">Login</a></li>
-						<li class="active"><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.html">Register</a></li>
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.php">Login</a></li>
+						<li class="active"><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.php">Register</a></li>
 					</ul>
 				</div>
 				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
@@ -54,7 +54,7 @@
 			</div>
 			<div class="logo-nav">
 				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-					<h1><a href="index.html">Outfitcost <span>Shop anywhere</span></a></h1>
+					<h1><a href="index.php">Outfitcost <span>Shop anywhere</span></a></h1>
 				</div>
 				<div class="logo-nav-left1">
 					<nav class="navbar navbar-default">
@@ -69,7 +69,7 @@
 					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li><a href="index.html">Home</a></li>	
+							<li><a href="index.php">Home</a></li>	
 							<!-- untuk menu -->
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
@@ -78,33 +78,33 @@
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Men's Bag</h6>
-												<li><a href="products.html">Backpack</a></li>
-												<li><a href="products.html">Briefcase</a></li>
-												<li><a href="products.html">Carryall</a></li>
-												<li><a href="products.html">Sling Bag</a></li>
-												<li><a href="products.html">Tote Bag</a></li>
-												<li><a href="products.html">Waist Bag</a></li>
+												<li><a href="products.php">Backpack</a></li>
+												<li><a href="products.php">Briefcase</a></li>
+												<li><a href="products.php">Carryall</a></li>
+												<li><a href="products.php">Sling Bag</a></li>
+												<li><a href="products.php">Tote Bag</a></li>
+												<li><a href="products.php">Waist Bag</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Women's Bag</h6>
-												<li><a href="products.html">Backpack</a></li>
-												<li><a href="products.html">Clutch Bag</a></li>
-												<li><a href="products.html">Drawstring Bag</a></li>
-												<li><a href="products.html">Sling Bag</a></li>
-												<li><a href="products.html">Tote Bag</a></li>
-												<li><a href="products.html">Wallets Bag</a></li>
-												<li><a href="products.html">Wristlet</a></li>
+												<li><a href="products.php">Backpack</a></li>
+												<li><a href="products.php">Clutch Bag</a></li>
+												<li><a href="products.php">Drawstring Bag</a></li>
+												<li><a href="products.php">Sling Bag</a></li>
+												<li><a href="products.php">Tote Bag</a></li>
+												<li><a href="products.php">Wallets Bag</a></li>
+												<li><a href="products.php">Wristlet</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Kid's Bag</h6>
-												<li><a href="products.html">Backpack</a></li>
-												<li><a href="products.html">Boy's School Bag</a></li>
-												<li><a href="products.html">Girl's School Bag</a></li>
-												<li><a href="products.html">Trolley Bag</a></li>
+												<li><a href="products.php">Backpack</a></li>
+												<li><a href="products.php">Boy's School Bag</a></li>
+												<li><a href="products.php">Girl's School Bag</a></li>
+												<li><a href="products.php">Trolley Bag</a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -118,37 +118,37 @@
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>New Arrivals</h6>
-												<li><a href="products.html">Adidas</a></li>
-												<li><a href="products.html">Chanel</a></li>
-												<li><a href="products.html">Mulberry</a></li>
-												<li><a href="products.html">Michael Kors</a></li>
-												<li><a href="products.html">Versace</a></li>
+												<li><a href="products.php">Adidas</a></li>
+												<li><a href="products.php">Chanel</a></li>
+												<li><a href="products.php">Mulberry</a></li>
+												<li><a href="products.php">Michael Kors</a></li>
+												<li><a href="products.php">Versace</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Limited Collections</h6>
-												<li><a href="products.html">Carlier</a></li>
-												<li><a href="products.html">Coach</a></li>
-												<li><a href="products.html">Dior</a></li>
-												<li><a href="products.html">Gucci</a></li>
-												<li><a href="products.html">Jimmy Choo</a></li>
-												<li><a href="products.html">Louis Vuitton</a></li>
+												<li><a href="products.php">Carlier</a></li>
+												<li><a href="products.php">Coach</a></li>
+												<li><a href="products.php">Dior</a></li>
+												<li><a href="products.php">Gucci</a></li>
+												<li><a href="products.php">Jimmy Choo</a></li>
+												<li><a href="products.php">Louis Vuitton</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Accessories</h6>
-												<li><a href="products.html">Sport</a></li>
-												<li><a href="products.html">Travel</a></li>
-												<li><a href="products.html">Others</a></li>
+												<li><a href="products.php">Sport</a></li>
+												<li><a href="products.php">Travel</a></li>
+												<li><a href="products.php">Others</a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
 									</div>
 								</ul>
 							</li>
-							<li><a href="mail.html">Mail Us</a></li>
+							<li><a href="mail.php">Mail Us</a></li>
 						</ul>
 					</div>
 					</nav>
@@ -189,7 +189,7 @@
 	<div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li><a href="index.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
 				<li class="active">Single Page</li>
 			</ol>
 		</div>
@@ -223,21 +223,21 @@
 				<div class="categories animated wow slideInUp" data-wow-delay=".5s">
 					<h3>Categories</h3>
 					<ul class="cate">
-						<li><a href="products.html">Best Selling</a> <span>(15)</span></li>
-						<li><a href="products.html">Man</a> <span>(16)</span></li>
+						<li><a href="products.php">Best Selling</a> <span>(15)</span></li>
+						<li><a href="products.php">Man</a> <span>(16)</span></li>
 							<ul>
-								<li><a href="products.html">Backpack</a> <span>(2)</span></li>
-								<li><a href="products.html">Briefcase</a> <span>(5)</span></li>
-								<li><a href="products.html">Carryall</a> <span>(1)</span></li>
-								<li><a href="products.html">Sling Bag</a> <span>(0)</span></li>
-								<li><a href="products.html">Tote Bag</a> <span>(1)</span></li>
-								<li><a href="products.html">Waist Bag</a> <span>(0)</span></li>
+								<li><a href="products.php">Backpack</a> <span>(2)</span></li>
+								<li><a href="products.php">Briefcase</a> <span>(5)</span></li>
+								<li><a href="products.php">Carryall</a> <span>(1)</span></li>
+								<li><a href="products.php">Sling Bag</a> <span>(0)</span></li>
+								<li><a href="products.php">Tote Bag</a> <span>(1)</span></li>
+								<li><a href="products.php">Waist Bag</a> <span>(0)</span></li>
 							</ul>
-						<li><a href="products.html">Sales</a> <span>(15)</span></li>
+						<li><a href="products.php">Sales</a> <span>(15)</span></li>
 					</ul>
 				</div>
 				<div class="men-position animated wow slideInUp" data-wow-delay=".5s">
-					<a href="single.html"><img src="images/29.jpg" alt=" " class="img-responsive" /></a>
+					<a href="single.php"><img src="images/29.jpg" alt=" " class="img-responsive" /></a>
 					<div class="men-position-pos">
 						<h4>Summer collection</h4>
 						<h5><span>55%</span> Flat Discount</h5>
@@ -387,9 +387,9 @@
 				<div class="col-md-3 new-collections-grid">
 					<div class="new-collections-grid1 animated wow slideInLeft" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/175.jpg" alt=" " class="img-responsive"></a>
+							<a href="single.php" class="product-image"><img src="images/175.jpg" alt=" " class="img-responsive"></a>
 							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
+								<a href="single.php">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right">
 								<div class="rating">
@@ -412,7 +412,7 @@
 								</div>
 							</div>
 						</div>
-						<h4><a href="single.html">Briefcase Type 1</a></h4>
+						<h4><a href="single.php">Briefcase Type 1</a></h4>
 						<p>XXX</p>
 						<div class="new-collections-grid1-left simpleCart_shelfItem">
 							<p><i>$280</i> <span class="item_price">$245</span><a class="item_add" href="#">add to cart </a></p>
@@ -423,9 +423,9 @@
 					<div class="new-collections-grid1-sub">
 						<div class="new-collections-grid1 animated wow slideInLeft" data-wow-delay=".6s">
 							<div class="new-collections-grid1-image">
-								<a href="single.html" class="product-image"><img src="images/176.jpg" alt=" " class="img-responsive"></a>
+								<a href="single.php" class="product-image"><img src="images/176.jpg" alt=" " class="img-responsive"></a>
 								<div class="new-collections-grid1-image-pos">
-									<a href="single.html">Quick View</a>
+									<a href="single.php">Quick View</a>
 								</div>
 								<div class="new-collections-grid1-right">
 									<div class="rating">
@@ -448,7 +448,7 @@
 									</div>
 								</div>
 							</div>
-							<h4><a href="single.html">Briefcase Type 2</a></h4>
+							<h4><a href="single.php">Briefcase Type 2</a></h4>
 							<p>XXX</p>
 							<div class="new-collections-grid1-left simpleCart_shelfItem">
 								<p><i>$305</i> <span class="item_price">$280</span><a class="item_add" href="#">add to cart </a></p>
@@ -458,9 +458,9 @@
 					<div class="new-collections-grid1-sub">
 						<div class="new-collections-grid1 animated wow slideInLeft" data-wow-delay=".7s">
 							<div class="new-collections-grid1-image">
-								<a href="single.html" class="product-image"><img src="images/178.jpg" alt=" " class="img-responsive"></a>
+								<a href="single.php" class="product-image"><img src="images/178.jpg" alt=" " class="img-responsive"></a>
 								<div class="new-collections-grid1-image-pos">
-									<a href="single.html">Quick View</a>
+									<a href="single.php">Quick View</a>
 								</div>
 								<div class="new-collections-grid1-right">
 									<div class="rating">
@@ -483,7 +483,7 @@
 									</div>
 								</div>
 							</div>
-							<h4><a href="single.html">Waist Bag Type 1</a></h4>
+							<h4><a href="single.php">Waist Bag Type 1</a></h4>
 							<p>XXX</p>
 							<div class="new-collections-grid1-left simpleCart_shelfItem">
 								<p><i>$500</i> <span class="item_price">$480</span><a class="item_add" href="#">add to cart </a></p>
@@ -495,9 +495,9 @@
 				<div class="col-md-3 new-collections-grid">
 					<div class="new-collections-grid1 animated wow slideInLeft" data-wow-delay=".8s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/182.jpg" alt=" " class="img-responsive"></a>
+							<a href="single.php" class="product-image"><img src="images/182.jpg" alt=" " class="img-responsive"></a>
 							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
+								<a href="single.php">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right">
 								<div class="rating">
@@ -520,7 +520,7 @@
 								</div>
 							</div>
 						</div>
-						<h4><a href="single.html">Carryall Type 1</a></h4>
+						<h4><a href="single.php">Carryall Type 1</a></h4>
 						<p>XXX</p>
 						<div class="new-collections-grid1-left simpleCart_shelfItem">
 							<p><i>$590</i> <span class="item_price">$585</span><a class="item_add" href="#">add to cart </a></p>
@@ -550,40 +550,40 @@
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
 					<h3>Outfitcost Events</h3>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single.php"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -591,20 +591,20 @@
 					<h3>Community</h3>
 					<div class="footer-grid-sub-grids">
 						<div class="footer-grid-sub-grid-left">
-							<a href="single.html"><img src="images/91.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single.php"><img src="images/91.jpg" alt=" " class="img-responsive" /></a>
 						</div>
 						<div class="footer-grid-sub-grid-right">
-							<h4><a href="single.html">Sellers</a></h4>
+							<h4><a href="single.php">Sellers</a></h4>
 							<p>Posted On 12/1/2020</p>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
 					<div class="footer-grid-sub-grids">
 						<div class="footer-grid-sub-grid-left">
-							<a href="single.html"><img src="images/101.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single.php"><img src="images/101.jpg" alt=" " class="img-responsive" /></a>
 						</div>
 						<div class="footer-grid-sub-grid-right">
-							<h4><a href="single.html">Sellers</a></h4>
+							<h4><a href="single.php">Sellers</a></h4>
 							<p>Posted On 12/1/2020</p>
 						</div>
 						<div class="clearfix"> </div>
@@ -613,7 +613,7 @@
 				<div class="clearfix"> </div>
 			</div>
 			<div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
-				<h2><a href="index.html">Outfitcost <span>shop anywhere</span></a></h2>
+				<h2><a href="index.php">Outfitcost <span>shop anywhere</span></a></h2>
 			</div>
 			<div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
 				<p>&copy 2020 Outfitcost. All rights reserved</p>
