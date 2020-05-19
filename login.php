@@ -1,3 +1,34 @@
+<?php
+
+session_start();
+$host_db="localhost";
+$user_db="root";
+$pass_db="";
+$nama_db="inkomtek_kvnwj_outfitcost";
+$mysqli = new mysqli($host_db, $user_db, $pass_db, $nama_db);
+
+if (isset($_POST['login'])) {
+    $Email = $_POST['Email'];
+    $Password = md5($_POST['Password']);
+    
+    $data = mysqli_query($mysqli, "select * from pembeli where Email='$Email' and Password='$Password'");
+ 
+    // menghitung jumlah data yang ditemukan
+    $cek = mysqli_num_rows($data);
+ 
+    if ($cek > 0) {
+		// Bila password benar
+        $_SESSION['Email'] = $Email;
+        $_SESSION['status'] = "login";
+        header("location:index.php");
+    } else {
+        echo '<script type="text/javascript">
+  alert("Data yang anda masukkan salah silahkan coba lagi");
+</script>';
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -32,160 +63,7 @@
 
 	<body>
 	<!-- untuk header -->
-	<div class="header">
-		<div class="container">
-			<div class="header-grid">
-				<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
-					<ul>
-						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">outfitcost@gmail.com</a></li>
-						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 <span>567 </span>893</li>
-						<li class="active"><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.php">Login</a></li>
-						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.php">Register</a></li>
-					</ul>
-				</div>
-				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
-					<ul class="social-icons">
-						<li><a href="#" class="facebook"></a></li>
-						<li><a href="#" class="twitter"></a></li>
-						<li><a href="#" class="instagram"></a></li>
-					</ul>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="logo-nav">
-				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-					<h1><a href="index.php">Outfitcost <span>Shop anywhere</span></a></h1>
-				</div>
-				<div class="logo-nav-left1">
-					<nav class="navbar navbar-default">
-					<!-- untuk mengelompokkannya agar lebih rapi pada tampilan di mobile device -->
-					<div class="navbar-header nav_2">
-						<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					</div>
-					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-						<ul class="nav navbar-nav">
-							<li><a href="index.php">Home</a></li>	
-							<!-- menu -->
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column columns-3">
-									<div class="row">
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<h6>Men's Bag</h6>
-												<li><a href="products.php">Backpack</a></li>
-												<li><a href="products.php">Briefcase</a></li>
-												<li><a href="products.php">Carryall</a></li>
-												<li><a href="products.php">Sling Bag</a></li>
-												<li><a href="products.php">Tote Bag</a></li>
-												<li><a href="products.php">Waist Bag</a></li>
-											</ul>
-										</div>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<h6>Women's Bag</h6>
-												<li><a href="products.php">Backpack</a></li>
-												<li><a href="products.php">Clutch Bag</a></li>
-												<li><a href="products.php">Drawstring Bag</a></li>
-												<li><a href="products.php">Sling Bag</a></li>
-												<li><a href="products.php">Tote Bag</a></li>
-												<li><a href="products.php">Wallets Bag</a></li>
-												<li><a href="products.php">Wristlet</a></li>
-											</ul>
-										</div>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<h6>Kid's Bag</h6>
-												<li><a href="products.php">Backpack</a></li>
-												<li><a href="products.php">Boy's School Bag</a></li>
-												<li><a href="products.php">Girl's School Bag</a></li>
-												<li><a href="products.php">Trolley Bag</a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Top Brands <b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column columns-3">
-									<div class="row">
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<h6>New Arrivals</h6>
-												<li><a href="products.php">Adidas</a></li>
-												<li><a href="products.php">Chanel</a></li>
-												<li><a href="products.php">Mulberry</a></li>
-												<li><a href="products.php">Michael Kors</a></li>
-												<li><a href="products.php">Versace</a></li>
-											</ul>
-										</div>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<h6>Limited Collections</h6>
-												<li><a href="products.php">Carlier</a></li>
-												<li><a href="products.php">Coach</a></li>
-												<li><a href="products.php">Dior</a></li>
-												<li><a href="products.php">Gucci</a></li>
-												<li><a href="products.php">Jimmy Choo</a></li>
-												<li><a href="products.php">Louis Vuitton</a></li>
-											</ul>
-										</div>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-												<h6>Accessories</h6>
-												<li><a href="products.php">Sport</a></li>
-												<li><a href="products.php">Travel</a></li>
-												<li><a href="products.php">Others</a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</ul>
-							</li>
-							<li><a href="mail.php">Mail Us</a></li>
-						</ul>
-					</div>
-					</nav>
-				</div>
-				<div class="logo-nav-right">
-					<div class="search-box">
-						<div id="sb-search" class="sb-search">
-							<form>
-								<input class="sb-search-input" placeholder="Enter your search term..." type="search" id="search">
-								<input class="sb-search-submit" type="submit" value="">
-								<span class="sb-icon-search"> </span>
-							</form>
-						</div>
-					</div>
-						<!-- script untuk pencarian -->
-						<script src="js/classie.js"></script>
-						<script src="js/uisearch.js"></script>
-							<script>
-								new UISearch( document.getElementById( 'sb-search' ) );
-							</script>
-				</div>
-				<div class="header-right">
-					<div class="cart box_1">
-						<a href="checkout.html">
-							<h3> <div class="total">
-								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-								<img src="images/bag.png" alt="" />
-							</h3>
-						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-						<div class="clearfix"> </div>
-					</div>	
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
+	<?php include('header.php') ?>
 	<div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
@@ -194,19 +72,26 @@
 			</ol>
 		</div>
 	</div>
+	
+<form action="" method="post">
 	<div class="login">
 		<div class="container">
 			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Login Form</h3>
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
 				<form>
-					<input type="email" placeholder="Email Address" required=" " >
-					<input type="password" placeholder="Password" required=" " >
-					<div class="forgot">
-						<a href="#">Forgot Password?</a>
-					</div>
-					<input type="submit" value="Login">
+					<input name="Email" type="email" placeholder="Email Address" required=" " >
+					<input name="Password" type="password" placeholder="Password" required=" " >
+
+					
+					<input type="submit" value="Login" name="login">
+				
 				</form>
+				</form>
+
+
 			</div>
+
+
 			<h4 class="animated wow slideInUp" data-wow-delay=".5s">For New People</h4>
 			<p class="animated wow slideInUp" data-wow-delay=".5s"><a href="register.php">Register Here</a> (Or) go back to <a href="index.php">Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></p>
 		</div>
