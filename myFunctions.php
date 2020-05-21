@@ -19,3 +19,13 @@ function searchProductByCategory($category)
     $result = $stmt->fetchAll();
     return $result;
 }
+
+function getSingleProduct($idProduct)
+{
+    require("pdoConnection.php");
+    $sql = "SELECT * FROM product WHERE IDProduk = '$idProduct'";
+    $stmt = $pdo->prepare($sql);
+    $stmt -> execute();
+    $result = $stmt->fetch();
+    return $result;
+}

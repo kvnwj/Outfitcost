@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -43,12 +44,7 @@
 	</div>
 	
 <?php
-$host_db="localhost";
-$user_db="root";
-$pass_db="";
-$nama_db="inkomtek_kvnwj_outfitcost";
-
-$mysqli = new mysqli($host_db, $user_db, $pass_db, $nama_db);
+require("mySQLiConnection.php");
 
 if (isset($_POST['daftar'])) {
     $FirstName = $mysqli->real_escape_string($_POST['FirstName']);

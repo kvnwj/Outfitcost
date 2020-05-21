@@ -1,6 +1,6 @@
 <?php
 require("myFunctions.php");
-?>
+session_start();?>
 
 <!DOCTYPE html>
 <html>
@@ -123,46 +123,57 @@ require("myFunctions.php");
 					</div>
 				</div>
 				<div class="products-right-grids-bottom">
+					<!-- Code untuk menampilkan hasil search -->
 					<?php
                     if (isset($_GET["search"])) {
                         $searchQuery = $_GET["search"];
                         $results = searchProductByQuery($searchQuery);
                     } elseif (isset($_GET["category"])) {
-						$category = $_GET["category"];
-						$results = searchProductByCategory($category);
-					} else {
-						echo "Error menampilkan produk. Tidak ada Kategori yang dipilih dan Tidak ada Search. ";
-					}
+                        $category = $_GET["category"];
+                        $results = searchProductByCategory($category);
+                    } else {
+                        echo "Error menampilkan produk. Tidak ada Kategori yang dipilih dan Tidak ada Search. ";
+                    }
                      ?>
 					<!-- Satu kotak Produk -->
-					<?php foreach ($results as $row) { ?>
+					<?php
+                    if ($results != null) {
+                        foreach ($results as $row) { ?>
 					<div class="col-md-4 products-right-grids-bottom-grid">
 						<div class="new-collections-grid1 products-right-grid1 animated wow slideInUp"
 							data-wow-delay=".5s">
 							<div class="new-collections-grid1-image">
 								<!-- Gambar per masing-masing produk -->
-								<a href="single.php" class="product-image"><img src="images/174.jpg" alt=" "
-										class="img-responsive"></a>
+								<a href="single.php?id=<?= $row['IDProduk']?>"
+									class="product-image"><img
+										src="<?= $row["Picture"]?>"
+										alt=" " class="img-responsive"></a>
 								<div class="new-collections-grid1-image-pos products-right-grids-pos">
-									<a href="single.php">Quick View</a>
+									<a
+										href="single.php?id=<?= $row['IDProduk']?>">Quick
+										View</a>
 								</div>
 								<div class="new-collections-grid1-right products-right-grids-pos-right">
 								</div>
 							</div>
 							<!-- Nama Produk di sini -->
-							<h4><a href="single.php"><?= $row['Name'] ?></a>
+							<h4><a
+									href="single.php?id=<?= $row['IDProduk']?>"><?= $row['Name'] ?></a>
 							</h4>
 							<!-- Deskripsi Singkat Produk (kalo ada) -->
 							<p>Office Use</p>
 							<div class="simpleCart_shelfItem products-right-grid1-add-cart">
 								<!-- Harga dan tombol add to cart di sini -->
 								<p><i>Rp. <?= $row['Price']+250000 ?></i>
-									<span class="item_price">Rp. <?= $row['Price'] ?></span><a
-										class="item_add" href="#">add to
-										cart </a></p>
+									<span class="item_price">Rp. <?= $row['Price'] ?></span>
+								</p>
 							</div>
 						</div>
 					</div>
+					<?php
+                        }
+                    } else { ?>
+						<p>No item matched your query. </p>
 					<?php } ?>
 					<!-- End Satu kotak Produk -->
 					<div class="clearfix"> </div>

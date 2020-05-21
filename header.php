@@ -22,6 +22,14 @@ $categories = $stmt->fetchAll();
                     </li>
                     <li class="active"><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a
                             href="register.php">Register</a></li>
+                    <?php if (isset($_SESSION['id'])) { ?>
+                    <li>
+                        Welcome, <?= $_SESSION["name"]?><br>
+                        Current Session ID is <?= $_SESSION['id']?>
+                    </li>
+                    <?php } else { ?>
+                        <li>You are Logged Out</li>
+                    <?php } ?>
                 </ul>
             </div>
             <div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
@@ -29,6 +37,7 @@ $categories = $stmt->fetchAll();
                     <li><a href="#" class="facebook"></a></li>
                     <li><a href="#" class="twitter"></a></li>
                     <li><a href="#" class="instagram"></a></li>
+                    <li><a href="logout.php">Logout</a></li>
                 </ul>
             </div>
             <div class="clearfix"> </div>
@@ -72,7 +81,7 @@ $categories = $stmt->fetchAll();
                                     </div>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <!-- <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Top Brands <b
                                         class="caret"></b></a>
                                 <ul class="dropdown-menu multi-column columns-3">
@@ -109,7 +118,7 @@ $categories = $stmt->fetchAll();
                                         <div class="clearfix"></div>
                                     </div>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li><a href="mail.php">Mail Us</a></li>
                         </ul>
                     </div>
