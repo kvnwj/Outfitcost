@@ -115,6 +115,7 @@
 
 			<div class="checkout-right animated wow slideInUp animated" data-wow-delay=".5s"
 				style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
+				<!-- Tabel yang menampilkan  -->
 				<table class="timetable_sub">
 					<thead>
 						<tr>

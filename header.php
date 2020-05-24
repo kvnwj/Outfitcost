@@ -25,7 +25,7 @@ $categories = $stmt->fetchAll();
                     <?php if (isset($_SESSION['id'])) { ?>
                     <li>
                         Welcome, <?= $_SESSION["name"]?><br>
-                        Current Session ID is <?= $_SESSION['id']?>
+                        <!-- Current Session ID is <?= $_SESSION['id']?> -->
                     </li>
                     <?php } else { ?>
                         <li>You are Logged Out</li>

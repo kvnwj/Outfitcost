@@ -1,4 +1,6 @@
 <?php
+// Daftar fungsi-fungsi yang digunakan pada website Outfitcost
+// Kevin Widjaja 00000027219
 
 function searchProductByQuery($searchQuery)
 {
