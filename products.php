@@ -1,6 +1,9 @@
 <?php
 require("myFunctions.php");
-session_start();?>
+session_start();
+//$minimum_range = 100;
+//$maximum_range = 600;
+?>
 
 <!DOCTYPE html>
 <html>
@@ -75,9 +78,26 @@ session_start();?>
 								max: 1000,
 								values: [100, 500],
 								slide: function(event, ui) {
+									//$("#minimum_range").val(ui.values[0]);
+									//$("#maximum_range").val(ui.values[1]);
+									//load_product(ui.values[0], ui.values[1]);
 									$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
 								}
 							});
+							load_product(<?php echo $minimum_range; ?>, <?php echo $maximum_range; ?>);
+							
+							/* function load_product(minimum_range, maximum_range)
+							{
+								$.ajax({
+									method:"POST",
+									data:{minimum_range:minimum_range, maximum_range:maximum_range},
+									success:function(data)
+									{
+										$('#load_product').fadeIn('slow').html(data);
+										}
+										});
+							} */
+							
 							$("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider(
 								"values", 1));
 
