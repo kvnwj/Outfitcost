@@ -1,37 +1,49 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Register</title>
-		<!-- untuk device mobile -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-		<!-- untuk device mobile -->
-		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-		<!-- js -->
-		<script src="js/jquery.min.js"></script>
-		<!-- js -->
-		<!-- untuk cart -->
-		<script src="js/simpleCart.min.js"> </script>
-		<!-- cart -->
-		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-		<!-- untuk Bootstrap dapat berjalan -->
-		<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-		<!-- untuk Bootstrap mengenai style-nya -->
-		<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-		<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-		<!-- untuk efek animasi -->
-		<link href="css/animate.min.css" rel="stylesheet"> 
-		<script src="js/wow.min.js"></script>
-		<script>
-			new WOW().init();
-		</script>
-	</head>
-	
-	<body>
+
+<head>
+	<title>Register</title>
+	<!-- untuk device mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript">
+		addEventListener("load", function() {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- untuk device mobile -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- js -->
+	<script src="js/jquery.min.js"></script>
+	<!-- js -->
+	<!-- untuk cart -->
+	<script src="js/simpleCart.min.js"> </script>
+	<!-- cart -->
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<!-- untuk Bootstrap dapat berjalan -->
+	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+	<!-- untuk Bootstrap mengenai style-nya -->
+	<link
+		href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+		rel='stylesheet' type='text/css'>
+	<link
+		href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic'
+		rel='stylesheet' type='text/css'>
+	<!-- untuk efek animasi -->
+	<link href="css/animate.min.css" rel="stylesheet">
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+</head>
+
+<body>
 	<!-- untuk header -->
 	<?php include('header.php') ?>
 	<div class="breadcrumbs">
@@ -42,8 +54,8 @@
 			</ol>
 		</div>
 	</div>
-	
-<?php
+
+	<?php
 require("mySQLiConnection.php");
 
 if (isset($_POST['daftar'])) {
@@ -64,7 +76,7 @@ if (isset($_POST['daftar'])) {
         if ($num_row == 0) {
             $Password = md5($Password);
             $sql_insert = mysqli_query($mysqli, "INSERT INTO pembeli VALUES ('','$Email','$FirstName','$LastName','$Password')");
-            echo "Pendaftaran berhasil. Login <a href='login.php'>disini</a>";
+            echo "<h2 class='text-center'>Pendaftaran berhasil. Login <a href='login.php'>disini</a></h2>";
         } else {
             echo '<script type="text/javascript">
   alert("Email sudah terdaftar, Silahkan gunakan email lain");
@@ -72,49 +84,51 @@ if (isset($_POST['daftar'])) {
         }
     }
 }
- 
 
 ?>
-<form action="" method="post">
-	<div class="register">
-		<div class="container">
-			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Register Here</h3>
-			<div class="login-form-grids">
 
-				<h5 class="animated wow slideInUp" data-wow-delay=".5s">profile information</h5>
-				<form class="animated wow slideInUp" data-wow-delay=".5s">
-					<input name="FirstName" type="text" placeholder="First Name..." required=" " >
-					<input name="LastName" type="text" placeholder="Last Name..." required=" " >
-					<input name="Email" type="email" placeholder="Email Address" required=" " >
-					<input name="Password" type="password" placeholder="Password" required=" " >
-					
-					<input type="submit" style="center" value="Register" name="daftar">
+	<form action="" method="post">
+		<div class="register">
+			<div class="container">
+				<h3 class="animated wow zoomIn" data-wow-delay=".5s">Register Here</h3>
+				<div class="login-form-grids">
+
+					<h5 class="animated wow slideInUp" data-wow-delay=".5s">profile information</h5>
+					<form class="animated wow slideInUp" data-wow-delay=".5s">
+						<input name="FirstName" type="text" placeholder="First Name..." required=" ">
+						<input name="LastName" type="text" placeholder="Last Name..." required=" ">
+						<input name="Email" type="email" placeholder="Email Address" required=" ">
+						<input name="Password" type="password" placeholder="Password" required=" ">
+
+						<input type="submit" style="center" value="Register" name="daftar">
 					</form>
-							
-						</div>
-					</div>
 
-					
-				</form>
+				</div>
 			</div>
-			<div class="register-home animated wow slideInUp" data-wow-delay=".5s">
-				<a href="index.php">Home</a>
-			</div>
-		</div>
+
+
+	</form>
+	</div>
+	<!-- <div class="register-home animated wow slideInUp" data-wow-delay=".5s">
+		<a href="index.php">Home</a>
+	</div> -->
+	</div>
 	</div>
 	<div class="footer">
 		<div class="container">
 			<div class="footer-grids">
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
 					<h3>About Us</h3>
-					<p>Selling and buying everything bags you need online.<span></span>Trusted by over 
+					<p>Selling and buying everything bags you need online.<span></span>Trusted by over
 						1,000,000 sellers and buyers worldwide.</span></p>
 				</div>
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
 					<h3>Contact Info</h3>
 					<ul>
-						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
-						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">outfitcost@gmail.com</a></li>
+						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block,
+							<span>New York City.</span></li>
+						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a
+								href="mailto:info@example.com">outfitcost@gmail.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 893</li>
 					</ul>
 				</div>
@@ -192,4 +206,5 @@ if (isset($_POST['daftar'])) {
 		</div>
 	</div>
 </body>
+
 </html>

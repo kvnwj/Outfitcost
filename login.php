@@ -1,5 +1,6 @@
 <?php
 require("mySQLiConnection.php");
+require("myFunctions.php");
 session_start();
 
 if (isset($_POST['login'])) {
@@ -15,9 +16,10 @@ if (isset($_POST['login'])) {
         // Bila password benar
         $_SESSION['Email'] = $Email;
         $user = mysqli_fetch_array($data, MYSQLI_ASSOC);
-        $_SESSION["id"] = $user["IDPembeli"];
+        $_SESSION["IDPembeli"] = $user["IDPembeli"];
         $_SESSION["name"] = $user["FirstName"];
-        $_SESSION['status'] = "login";
+		$_SESSION['status'] = "login";
+    	$_SESSION['IDTransaksi'] = getIDTransaksi($user["IDPembeli"]);
         header("location:index.php");
     } else {
         echo '<script type="text/javascript">alert("Data yang anda masukkan salah silahkan coba lagi");</script>';
@@ -91,20 +93,13 @@ if (isset($_POST['login'])) {
 						<input name="Password" type="password" placeholder="Password" required=" ">
 						<input type="submit" value="Login" name="login">
 					</form>
+					<h4 class="animated wow slideInUp" data-wow-delay=".5s">For New People</h4>
+						<p class="animated wow slideInUp" data-wow-delay=".5s"><a href="register.php">Register Here</a> / <a href="index.php">Go Back to Home<span class="glyphicon glyphicon-menu-right"
+								aria-hidden="true"></span></a></p>
 				</div>
 			</div>
 		</div>
 	</form>
-
-
-	</div>
-
-
-	<h4 class="animated wow slideInUp" data-wow-delay=".5s">For New People</h4>
-	<p class="animated wow slideInUp" data-wow-delay=".5s"><a href="register.php">Register Here</a> (Or) go back to <a
-			href="index.php">Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></p>
-	</div>
-	</div>
 	<div class="footer">
 		<div class="container">
 			<div class="footer-grids">

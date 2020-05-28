@@ -186,7 +186,7 @@ if (isset($_GET["id"])) {
 								<div class="clearfix"> </div><br>
 								<div class="occasion-cart">
 									<button type="submit"
-										style="font-size: 14px;color: #D8703F;margin: 0;text-decoration: none;text-transform: uppercase;padding: .5em 1em;border: 1px solid; background: white;" name="idProduk" value="<?= $id?>">ADD
+										style="font-size: 14px;color: #D8703F;margin: 0;text-decoration: none;text-transform: uppercase;padding: .5em 1em;border: 1px solid; background: white;" name="IDProduk" value="<?= $id?>">ADD
 										TO CART</button>
 								</div>
 							</form>

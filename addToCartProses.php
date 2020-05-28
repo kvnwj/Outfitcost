@@ -1,73 +1,37 @@
 <?php
 session_start();
 require('pdoConnection.php');
+require('myFunctions.php');
 
-$idProduk = $_POST['idProduk'];
+$IDProduk = $_POST['IDProduk'];
 $jumlah = $_POST['quantity'];
 
 // Cek apakah user sudah login
-if (isset($_SESSION['id'])) {
+if (isset($_SESSION['IDPembeli'])) {
     // Bila user sudah login
-    $idPembeli = $_SESSION['id'];
+    $IDPembeli = $_SESSION['IDPembeli'];
     // Cek apakah pembeli tersebut memiliki transaksi berstatus "DALAM KERANJANG" atau tidak
-    $idTransaksi = getIDTransaksi($idPembeli);
-    if ($idTransaksi != null) {
+    $IDTransaksi = getIDTransaksi($IDPembeli);
+    if ($IDTransaksi != null) {
         // Bila ada IDTransaksi
-        addProductToCart($idTransaksi, $idProduk, $jumlah);
+        addProductToCart($IDTransaksi, $IDProduk, $jumlah);
         header("Location: checkout.php");
     } else {
         // Bila tidak ada IDTransaksi
-        // Server otomatis membuatkan transaksi baru
+        // Server otomatis membuatkan transaksi baru dengan IDPembeli
         $params = array(
-            ':idPembeli' => $idPembeli
+            ':IDPembeli' => $IDPembeli
         );
-        $stmtCreateNewTransaksi = $pdo -> prepare('INSERT INTO transaksi(IDTransaksi, IDPembeli, Status) VALUES(NULL, :idPembeli, "DALAM KERANJANG")');
+        $stmtCreateNewTransaksi = $pdo -> prepare('INSERT INTO transaksi(IDTransaksi, IDPembeli, Status) VALUES(NULL, :IDPembeli, "DALAM KERANJANG")');
         $stmtCreateNewTransaksi -> execute($params);
 
         // Baru tambahkan ke dalam keranjang dengan transaksi tsb
-        $idTransaksi = getIDTransaksi($idPembeli);
-        addProductToCart($idTransaksi, $idProduk, $jumlah);
+        $IDTransaksi = getIDTransaksi($IDPembeli);
+        $_SESSION['IDTransaksi'] = $IDTransaksi;
+        addProductToCart($IDTransaksi, $IDProduk, $jumlah);
         header("Location: checkout.php");
     }
 } else {
     // Minta user login terlebih dahulu
     header("Location: login.php");
-}
-
-function getIDTransaksi($idPembeli)
-{
-    require('pdoConnection.php');
-    $params = array(
-        ':idPembeli' => $idPembeli
-    );
-    $stmt = $pdo -> prepare("SELECT t.IDTransaksi FROM transaksi t WHERE t.IDPembeli = :idPembeli AND t.Status = 'DALAM KERANJANG'");
-    $stmt -> execute($params);
-    $result = $stmt->fetch();
-    return $result['IDTransaksi'];
-}
-
-function addProductToCart($idTransaksi, $idProduk, $jumlah)
-{
-    require('pdoConnection.php');
-    $params = array(
-        ':idTransaksi' => $idTransaksi,
-        ':idProduk' => $idProduk,
-        ':jumlah' => $jumlah
-    );
-    $paramsCek = array(
-        ':idTransaksi' => $idTransaksi,
-        ':idProduk' => $idProduk,
-    );
-    // Cek apakah di keranjang sudah ada produk tsb atau belum
-    $stmtCek = $pdo -> prepare('SELECT * FROM keranjang k WHERE k.IDProduk = :idProduk AND k.IDTransaksi = :idTransaksi');
-    $stmtCek -> execute($paramsCek);
-    if ($row = $stmtCek->fetch()) {
-        // Bila sudah ada, maka update saja jumlahnya
-        $stmt = $pdo -> prepare('UPDATE keranjang SET jumlah = :jumlah WHERE IDProduk = :idProduk AND IDTransaksi = :idTransaksi');
-        $stmt -> execute($params);
-    } else {
-        // Bila Belum, maka buat entri baru ke tabel keranjang
-        $stmt = $pdo -> prepare('INSERT INTO keranjang(IDTransaksi, IDProduk, jumlah) VALUES(:idTransaksi, :idProduk, :jumlah)');
-        $stmt -> execute($params);
-    }
 }
