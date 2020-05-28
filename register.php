@@ -67,8 +67,9 @@ if (isset($_POST['daftar'])) {
     
     if (strlen($Password) > 25 || strlen($Password) < 6) {
         echo '<script type="text/javascript">
-  alert("Password harus antara 6-25 karakter");
+  alert("Password harus antara 6-25 karakter.");
 </script>';
+		var_dump($Password);
     } else {
         $sqli_get = mysqli_query($mysqli, "SELECT * FROM pembeli WHERE Email = '$Email'");
         $num_row = mysqli_num_rows($sqli_get);
