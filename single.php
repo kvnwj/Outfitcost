@@ -173,8 +173,9 @@ if (isset($_GET["id"])) {
 							</ul>
 						</div>
 						<div class="color-quality-right">
-							<h5>Quantity :</h5>
-							<form action="#" method="POST">
+							<!-- Form untuk menambahkan produk ke dalam keranjang -->
+							<form method="POST" action="addToCartProses.php">
+								<h5>Quantity :</h5>
 								<select id="country1" class="frm-field required sect" name="quantity">
 									<option value="1">1</option>
 									<option value="2">2</option>
@@ -182,14 +183,16 @@ if (isset($_GET["id"])) {
 									<option value="4">4</option>
 									<option value="5">5</option>
 								</select>
+								<div class="clearfix"> </div><br>
+								<div class="occasion-cart">
+									<button type="submit"
+										style="font-size: 14px;color: #D8703F;margin: 0;text-decoration: none;text-transform: uppercase;padding: .5em 1em;border: 1px solid; background: white;" name="IDProduk" value="<?= $id?>">ADD
+										TO CART</button>
+								</div>
 							</form>
 						</div>
-						<div class="clearfix"> </div>
 					</div>
-					<br>
-					<div class="occasion-cart">
-						<a class="item_add" href="#">add to cart </a>
-					</div>
+
 				</div>
 				<div class="clearfix"> </div>
 				<div class="bootstrap-tab animated wow slideInUp" data-wow-delay=".5s">
@@ -210,43 +213,6 @@ if (isset($_GET["id"])) {
 								<p><?=$product["Description"]?>
 								</p>
 							</div>
-							<!-- <div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="profile"
-								aria-labelledby="profile-tab">
-								<div class="bootstrap-tab-text-grids">
-									<div class="bootstrap-tab-text-grid">
-										<div class="bootstrap-tab-text-grid-left">
-											<img src="images/4.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="bootstrap-tab-text-grid-right">
-											<ul>
-												<li><a href="#">Legendary Grandpa</a></li>
-												<li><a href="#"><span class="glyphicon glyphicon-share"
-															aria-hidden="true"></span>Reply</a></li>
-											</ul>
-											<p>BLALALALALALALALALALALALALALALALALALALALALALALALALALALA
-												BLALALALALALALALALALALALALALALALALALALALALALALALALALALA
-												BLALALALALALALALALALALALALALALALALALALALALALALALALALALA</p>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-									<div class="bootstrap-tab-text-grid">
-										<div class="bootstrap-tab-text-grid-left">
-											<img src="images/5.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="bootstrap-tab-text-grid-right">
-											<ul>
-												<li><a href="#">Legendary Uncle</a></li>
-												<li><a href="#"><span class="glyphicon glyphicon-share"
-															aria-hidden="true"></span>Reply</a></li>
-											</ul>
-											<p>BLALALALALALALALALALALALALALALALALALALALALALALALALALALA
-												BLALALALALALALALALALALALALALALALALALALALALALALALALALALA
-												BLALALALALALALALALALALALALALALALALALALALALALALALALALALA</p>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-								</div>
-							</div> -->
 						</div>
 					</div>
 				</div>

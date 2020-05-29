@@ -22,10 +22,10 @@ $categories = $stmt->fetchAll();
                     </li>
                     <li class="active"><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a
                             href="register.php">Register</a></li>
-                    <?php if (isset($_SESSION['id'])) { ?>
+                    <?php if (isset($_SESSION['IDPembeli'])) { ?>
                     <li>
                         Welcome, <?= $_SESSION["name"]?><br>
-                        Current Session ID is <?= $_SESSION['id']?>
+                        <!-- Current Session ID is <?= $_SESSION['IDPembeli']?> -->
                     </li>
                     <?php } else { ?>
                         <li>You are Logged Out</li>
@@ -147,12 +147,10 @@ $categories = $stmt->fetchAll();
                     <a href="checkout.php">
                         <h3>
                             <div class="total">
-                                <span class="simpleCart_total"></span> (<span id="simpleCart_quantity"
-                                    class="simpleCart_quantity"></span> items)</div>
+                               My Cart</div>
                             <img src="images/bag.png" alt="" />
                         </h3>
                     </a>
-                    <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
                     <div class="clearfix"> </div>
                 </div>
             </div>

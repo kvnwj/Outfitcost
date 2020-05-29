@@ -108,158 +108,113 @@
 	<!-- checkout -->
 	<div class="checkout">
 		<div class="container">
-			<h3 class="animated wow slideInLeft animated" data-wow-delay=".5s"
-				style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">Your shopping cart
-				contains: <span>3 Products</span></h3>
-			<!---728x90--->
-
+			<!-- Code untuk menampilkan produk di tabel customer -->
+			<?php
+                require("myFunctions.php");
+                $customerCart = getCustomerCart();?>
 			<div class="checkout-right animated wow slideInUp animated" data-wow-delay=".5s"
 				style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
+				<?php if ($customerCart==null) {
+                    // Html bila keranjang kosong?>
+				<h3 class="animated wow slideInLeft animated" data-wow-delay=".5s"
+					style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft; margin: 150px 50px">
+					Your shopping cart
+					is empty</h3>
+				<?php
+                } else {
+                    $cartLength = sizeof($customerCart) ?>
+				<h3 class="animated wow slideInLeft animated" data-wow-delay=".5s"
+					style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">Your shopping cart
+					contains: <span><?= $cartLength?> Products</span>
+				</h3>
+				<!-- Table Headers -->
 				<table class="timetable_sub">
 					<thead>
 						<tr>
-							<th>SL No.</th>
-							<th>Product</th>
-							<th>Quality</th>
+							<th>No.</th>
+							<th>Product Image</th>
+							<th>Quantity</th>
 							<th>Product Name</th>
-							<th>Service Charges</th>
 							<th>Price</th>
+							<th>Category</th>
+							<th>Brand</th>
 							<th>Remove</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="rem1">
-							<td class="invert">1</td>
-							<td class="invert-image"><a href="single.php"><img src="images/22.jpg" alt=" "
-										class="img-responsive"></a></td>
-							<td class="invert">
-								<div class="quantity">
-									<div class="quantity-select">
-										<div class="entry value-minus">&nbsp;</div>
-										<div class="entry value"><span>1</span></div>
-										<div class="entry value-plus active">&nbsp;</div>
-									</div>
-								</div>
+						<?php $i = 1;
+                    foreach ($customerCart as $row) { ?>
+						<!-- // Html untuk mengisi tabel keranjang -->
+						<tr class="rem<?= $i?>">
+							<td class="invert"><?= $i?>
 							</td>
-							<td class="invert">Black Shoe</td>
-							<td class="invert">$5.00</td>
-							<td class="invert">$290.00</td>
+							<td class="invert-image"><a
+									href="single.php?id=<?=$row['IDProduk']?>"><img
+										src="<?= $row['Picture']?>"
+										alt=" " class="img-responsive"></a></td>
+							<td class="invert"><?= $row['jumlah']?>
+							</td>
+							<td class="invert"><?= $row['Name']?>
+							</td>
+							<td class="invert">Rp. <?= $row['Price']?>
+							</td>
+							<td class="invert"><?= $row['CategoryName']?>
+							</td>
+							<td class="invert"><?= $row['BrandName']?>
+							</td>
 							<td class="invert">
 								<div class="rem">
-									<div class="close1"> </div>
+									<a
+										href="deleteProduk.php?IDProduk=<?= $row["IDProduk"]?>&IDTransaksi=<?= $_SESSION["IDTransaksi"]?>">
+										<div class="close<?= $i?>">
+										</div>
+									</a>
 								</div>
 								<script>
 									$(document).ready(function(c) {
-										$('.close1').on('click', function(c) {
-											$('.rem1').fadeOut('slow', function(c) {
-												$('.rem1').remove();
+										$('.close<?= $i?>').on('click', function(c) {
+											$('.rem<?= $i?>').fadeOut('slow', function(
+												c) {
+												$('.rem<?= $i?>').remove();
 											});
 										});
 									});
 								</script>
 							</td>
 						</tr>
-						<tr class="rem2">
-							<td class="invert">2</td>
-							<td class="invert-image"><a href="single.php"><img src="images/30.jpg" alt=" "
-										class="img-responsive"></a></td>
-							<td class="invert">
-								<div class="quantity">
-									<div class="quantity-select">
-										<div class="entry value-minus">&nbsp;</div>
-										<div class="entry value"><span>1</span></div>
-										<div class="entry value-plus active">&nbsp;</div>
-									</div>
-								</div>
-							</td>
-							<td class="invert">Centre Table</td>
-							<td class="invert">$5.00</td>
-							<td class="invert">$250.00</td>
-							<td class="invert">
-								<div class="rem">
-									<div class="close2"> </div>
-								</div>
-								<script>
-									$(document).ready(function(c) {
-										$('.close2').on('click', function(c) {
-											$('.rem2').fadeOut('slow', function(c) {
-												$('.rem2').remove();
-											});
-										});
-									});
-								</script>
-							</td>
-						</tr>
-						<tr class="rem3">
-							<td class="invert">3</td>
-							<td class="invert-image"><a href="single.php"><img src="images/11.jpg" alt=" "
-										class="img-responsive"></a></td>
-							<td class="invert">
-								<div class="quantity">
-									<div class="quantity-select">
-										<div class="entry value-minus">&nbsp;</div>
-										<div class="entry value"><span>1</span></div>
-										<div class="entry value-plus active">&nbsp;</div>
-									</div>
-								</div>
-							</td>
-							<td class="invert">Stone Bangles</td>
-							<td class="invert">$5.00</td>
-							<td class="invert">$299.00</td>
-							<td class="invert">
-								<div class="rem">
-									<div class="close3"> </div>
-								</div>
-								<script>
-									$(document).ready(function(c) {
-										$('.close3').on('click', function(c) {
-											$('.rem3').fadeOut('slow', function(c) {
-												$('.rem3').remove();
-											});
-										});
-									});
-								</script>
-							</td>
-						</tr>
-						<!--quantity-->
-						<script>
-							$('.value-plus').on('click', function() {
-								var divUpd = $(this).parent().find('.value'),
-									newVal = parseInt(divUpd.text(), 10) + 1;
-								divUpd.text(newVal);
-							});
-
-							$('.value-minus').on('click', function() {
-								var divUpd = $(this).parent().find('.value'),
-									newVal = parseInt(divUpd.text(), 10) - 1;
-								if (newVal >= 1) divUpd.text(newVal);
-							});
-						</script>
-						<!--quantity-->
+						<?php $i++;
+                    } ?>
 					</tbody>
 				</table>
 			</div>
-			<!---728x90--->
-
 			<div class="checkout-left">
 				<div class="checkout-left-basket animated wow slideInLeft animated" data-wow-delay=".5s"
 					style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
-					<h4>Continue to basket</h4>
+					<h4>Cart Total</h4>
 					<ul>
-						<li>Product1 <i>-</i> <span>$250.00 </span></li>
-						<li>Product2 <i>-</i> <span>$290.00 </span></li>
-						<li>Product3 <i>-</i> <span>$299.00 </span></li>
-						<li>Total Service Charges <i>-</i> <span>$15.00</span></li>
-						<li>Total <i>-</i> <span>$854.00</span></li>
+						<?php
+                        $totalPrice = 0;
+                    foreach ($customerCart as $row) { ?>
+						<li><?= $row['Name'] ?>
+							<span>Rp. <?= $row['Price']*$row['jumlah']?></span>
+						</li>
+						<?php
+                        $totalPrice = $totalPrice + ($row['Price']*$row['jumlah']); } ?>
+						<li>Total <span>Rp. <?= $totalPrice?></span>
+						</li>
 					</ul>
+					<a href="checkoutProses.php"><strong>CHECKOUT</strong><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
 				</div>
 				<div class="checkout-right-basket animated wow slideInRight animated" data-wow-delay=".5s"
 					style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
 					<a href="index.php"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue
 						Shopping</a>
+					
 				</div>
 				<div class="clearfix"> </div>
 			</div>
+			<?php
+                } ?>
 		</div>
 	</div>
 	<!-- //checkout -->
@@ -360,3 +315,36 @@
 </body>
 
 </html>
+
+<!-- Original Code untuk tr -->
+<!-- <tr class="rem2">
+							<td class="invert">2</td>
+							<td class="invert-image"><a href="single.php"><img src="images/30.jpg" alt=" "
+										class="img-responsive"></a></td>
+							<td class="invert">
+								<div class="quantity">
+									<div class="quantity-select">
+										<div class="entry value-minus">&nbsp;</div>
+										<div class="entry value"><span>1</span></div>
+										<div class="entry value-plus active">&nbsp;</div>
+									</div>
+								</div>
+							</td>
+							<td class="invert">Centre Table</td>
+							<td class="invert">$5.00</td>
+							<td class="invert">$250.00</td>
+							<td class="invert">
+								<div class="rem">
+									<div class="close2"> </div>
+								</div>
+								<script>
+									$(document).ready(function(c) {
+										$('.close2').on('click', function(c) {
+											$('.rem2').fadeOut('slow', function(c) {
+												$('.rem2').remove();
+											});
+										});
+									});
+								</script>
+							</td>
+						</tr> -->

@@ -181,7 +181,6 @@ session_start();
 									href="single.php?id=<?= $row['IDProduk']?>"><?= $row['Name'] ?></a>
 							</h4>
 							<!-- Deskripsi Singkat Produk (kalo ada) -->
-							<p>Office Use</p>
 							<div class="simpleCart_shelfItem products-right-grid1-add-cart">
 								<!-- Harga dan tombol add to cart di sini -->
 								<p><i>Rp. <?= $row['Price']+250000 ?></i>
