@@ -25,7 +25,7 @@ if (isset($_SESSION['IDPembeli'])) {
         $stmtCreateNewTransaksi = $pdo -> prepare('INSERT INTO transaksi(IDTransaksi, IDPembeli, Status) VALUES(NULL, :IDPembeli, "DALAM KERANJANG")');
         $stmtCreateNewTransaksi -> execute($params);
 
-        // Baru tambahkan ke dalam keranjang dengan transaksi tsb
+        // Baru tambahkan ke dalam keranjang dengan IDtransaksi tsb
         $IDTransaksi = getIDTransaksi($IDPembeli);
         $_SESSION['IDTransaksi'] = $IDTransaksi;
         addProductToCart($IDTransaksi, $IDProduk, $jumlah);
