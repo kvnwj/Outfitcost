@@ -1,8 +1,8 @@
 <?php
 require("myFunctions.php");
 session_start();
-//$minimum_range = 100;
-//$maximum_range = 600;
+//$minimum_range = 100000;
+//$maximum_range = 500000;
 ?>
 
 <!DOCTYPE html>
@@ -75,8 +75,8 @@ session_start();
 							$("#slider-range").slider({
 								range: true,
 								min: 0,
-								max: 1000,
-								values: [100, 500],
+								max: 500000,
+								values: [0, 200000],
 								slide: function(event, ui) {
 									$("#minimum_range").val(ui.values[0]);
 									$("#maximum_range").val(ui.values[1]);
