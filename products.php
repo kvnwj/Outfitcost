@@ -86,7 +86,7 @@ $maximum_range = 500000;
 							});
 							load_product(<?php echo $minimum_range; ?>, <?php echo $maximum_range; ?>);
 							
-							/* function load_product(minimum_range, maximum_range)
+							function load_product(minimum_range, maximum_range)
 							{
 								$.ajax({
 									method:"POST",
@@ -96,7 +96,7 @@ $maximum_range = 500000;
 										$('#load_product').fadeIn('slow').html(data);
 										}
 										});
-							} */
+							}
 							
 							$("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider(
 								"values", 1));
