@@ -78,9 +78,9 @@ session_start();
 								max: 1000,
 								values: [100, 500],
 								slide: function(event, ui) {
-									//$("#minimum_range").val(ui.values[0]);
-									//$("#maximum_range").val(ui.values[1]);
-									//load_product(ui.values[0], ui.values[1]);
+									$("#minimum_range").val(ui.values[0]);
+									$("#maximum_range").val(ui.values[1]);
+									load_product(ui.values[0], ui.values[1]);
 									$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
 								}
 							});
