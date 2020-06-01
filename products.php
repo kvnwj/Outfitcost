@@ -1,8 +1,8 @@
 <?php
 require("myFunctions.php");
 session_start();
-//$minimum_range = 100000;
-//$maximum_range = 500000;
+$minimum_range = 100000;
+$maximum_range = 500000;
 ?>
 
 <!DOCTYPE html>
