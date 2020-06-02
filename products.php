@@ -1,8 +1,8 @@
 <?php
 require("myFunctions.php");
 session_start();
-//$minimum_range = 100;
-//$maximum_range = 600;
+$minimum_range = 100;
+$maximum_range = 600;
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +86,7 @@ session_start();
 							});
 							load_product(<?php echo $minimum_range; ?>, <?php echo $maximum_range; ?>);
 							
-							/* function load_product(minimum_range, maximum_range)
+							function load_product(minimum_range, maximum_range)
 							{
 								$.ajax({
 									method:"POST",
@@ -96,7 +96,7 @@ session_start();
 										$('#load_product').fadeIn('slow').html(data);
 										}
 										});
-							} */
+							}
 							
 							$("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider(
 								"values", 1));

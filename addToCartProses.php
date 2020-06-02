@@ -14,6 +14,7 @@ if (isset($_SESSION['IDPembeli'])) {
     $IDTransaksi = getIDTransaksi($IDPembeli);
     if ($IDTransaksi != null) {
         // Bila ada IDTransaksi
+        $_SESSION['IDTransaksi'] = $IDTransaksi;
         addProductToCart($IDTransaksi, $IDProduk, $jumlah);
         header("Location: checkout.php");
     } else {
