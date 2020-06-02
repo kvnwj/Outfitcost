@@ -1,8 +1,6 @@
 <?php
 require("myFunctions.php");
 session_start();
-$minimum_range = 100;
-$maximum_range = 600;
 ?>
 
 <!DOCTYPE html>
@@ -62,50 +60,6 @@ $maximum_range = 600;
 	<div class="products">
 		<div class="container">
 			<div class="col-md-4 products-left">
-				<div class="filter-price animated wow slideInUp" data-wow-delay=".5s">
-					<h3>Filter By Price</h3>
-					<ul class="dropdown-menu1">
-						<li><a href="">
-								<div id="slider-range"></div>
-								<input type="text" id="amount" style="border: 0" />
-							</a></li>
-					</ul>
-					<script type='text/javascript'>
-						$(window).load(function() {
-							$("#slider-range").slider({
-								range: true,
-								min: 0,
-								max: 1000,
-								values: [100, 500],
-								slide: function(event, ui) {
-									$("#minimum_range").val(ui.values[0]);
-									$("#maximum_range").val(ui.values[1]);
-									load_product(ui.values[0], ui.values[1]);
-									$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-								}
-							});
-							load_product(<?php echo $minimum_range; ?>, <?php echo $maximum_range; ?>);
-							
-							function load_product(minimum_range, maximum_range)
-							{
-								$.ajax({
-									method:"POST",
-									data:{minimum_range:minimum_range, maximum_range:maximum_range},
-									success:function(data)
-									{
-										$('#load_product').fadeIn('slow').html(data);
-										}
-										});
-							}
-							
-							$("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider(
-								"values", 1));
-
-
-						});
-					</script>
-					<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-				</div>
 				<div class="categories animated wow slideInUp" data-wow-delay=".5s">
 					<h3>Categories</h3>
 					<ul class="cate">
