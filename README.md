@@ -1,2 +1,2 @@
 # Outfitcost
- Tugas Akhir WDD Lab
+ Tugas Akhir mata kuliah **Web Design and Development**
